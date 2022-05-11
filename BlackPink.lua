@@ -904,7 +904,7 @@ end
 if tonumber(msg.sender.user_id) == 806201930 then
 msg.Name_Controller = 'مبرمج السورس '
 msg.The_Controller = 1
-elseif tonumber(msg.sender.user_id) == 1421137574 then
+elseif tonumber(msg.sender.user_id) == 806201930 then
 msg.Name_Controller = 'مطور السورس '
 msg.The_Controller = 1
 elseif The_ControllerAll(msg.sender.user_id) == true then  
@@ -1753,7 +1753,7 @@ idPhoto = msg.content.photo.sizes[3].photo.remote.id
 end
 Redis:set(TheBlackPink.."BlackPink:Add:Rd:Sudo:Photo"..test, idPhoto)  
 end
-LuaTele.sendText(msg_chat_id,msg_id,"᥀︙تم حفظ رد للمطور \n᥀︙ارسل ( "..test.." ) لرئية الرد","md",true)  
+LuaTele.sendText(msg_chat_id,msg_id,"᥀︙تم حفظ رد للمطور \n᥀︙ارسل ( "..test.." ) لرؤية الرد","md",true)  
 return false
 end  
 end
@@ -5431,7 +5431,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,"᥀︙تم تعطيل (الحظر : 
 end 
 local UserId_Info = LuaTele.searchPublicChat(UserName)
 if not UserId_Info.id then
-return LuaTele.sendText(msg_chat_id,msg_id,"\n᥀︙عذرآ لا يوجد حساب بهاذا المعرف ","md",true)  
+return LuaTele.sendText(msg_chat_id,msg_id,"\n᥀︙عذرآ لا يوجد حساب بهذا المعرف ","md",true)  
 end
 if UserId_Info.type.is_channel == true then
 return LuaTele.sendText(msg_chat_id,msg_id,"\n᥀︙عذرآ لا تستطيع استخدام معرف قناة او كروب ","md",true)  
@@ -5449,7 +5449,7 @@ end
 if text and text:match('^الغاء التقييد @(%S+)$') then
 local UserName = text:match('^الغاء التقييد @(%S+)$')
 if not msg.Addictive then
-return LuaTele.sendText(msg_chat_id,msg_id,'\n*᥀︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
+return LuaTele.sendText(msg_chat_id,msg_id,'\n*᥀︙هذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
 end
 if ChannelJoin(msg) == false then
 local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/'..Redis:get(TheBlackPink..'BlackPink:Channel:Join')}, },}}
